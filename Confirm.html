@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head as index.html -->
+</head>
+<body>
+    <header class="main-header">
+        <!-- Same header as index.html -->
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Delivery Confirmation</h1>
+            <p>Please complete this form to verify your delivery details</p>
+        </div>
+    </section>
+
+    <section class="confirmation-form">
+        <div class="container">
+            <form id="confirmForm" action="success.html" method="POST">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="deliveryAddress">Delivery Address</label>
+                    <textarea id="deliveryAddress" name="deliveryAddress" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productName">Product Name or Description</label>
+                    <input type="text" id="productName" name="productName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="orderID">Order ID (Optional)</label>
+                    <input type="text" id="orderID" name="orderID">
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="cta-button">Confirm My Delivery</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script>
+        document.getElementById('confirmForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Your custom JavaScript handling here
+            this.submit(); // Will redirect to success.html as per form action
+        });
+    </script>
+</body>
+</html>
